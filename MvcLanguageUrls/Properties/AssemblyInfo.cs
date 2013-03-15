@@ -10,11 +10,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("MvcLanguageUrls")]
-[assembly: AssemblyCopyright("Copyright © Salar Khalilzadeh 2013")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-
-// Setting ComVisible to false makes the types in this assembly not visible 
+[assembly: AssemblyCopyright("OpenSource MPLv2 @ Salar Khalilzadeh 2013")]
+ // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
@@ -22,5 +19,5 @@ using System.Runtime.InteropServices;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("678c3e69-703a-4d35-a710-beb1a97ea2ee")]
 
-[assembly: AssemblyVersion("1.0.0218.36")]
-[assembly: AssemblyFileVersion("1.0.0218.36")]
+[assembly: AssemblyVersion("1.0.0307.46")]
+[assembly: AssemblyFileVersion("1.0.0307.46")]

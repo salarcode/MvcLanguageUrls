@@ -35,7 +35,7 @@ namespace MvcLanguageUrls
 			var data = base.GetRouteData(httpContext);
 			if (data == null) return null;
 
-			var lang = data.Values[MvcUrlExtension.LocalizedRouteName];
+			var lang = data.Values[MvcUrlExtension.LanguageRouteKey];
 			if (lang == null)
 			{
 				string language = _defaultLanguage;

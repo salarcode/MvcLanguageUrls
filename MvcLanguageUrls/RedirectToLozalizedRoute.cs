@@ -40,7 +40,7 @@ namespace MvcLanguageUrls
 			{
 				string language = _defaultLanguage;
 				if (_useCurrentCultureLangauge)
-					language = MvcUrlExtension.GetCultureTwoDigit();
+					language = MvcUrlExtension.GetCultureTwoDigit(language);
 				data.Values[MvcUrlExtension.LanguageRouteKey] = language;
 
 				RedirectToLocalizedLocation(httpContext, language);
@@ -60,8 +60,8 @@ namespace MvcLanguageUrls
 				originalUrl = '/' + originalUrl;
 			var redirectUrl = string.Format("/{0}{1}", language, originalUrl);
 
-			httpContext.Response.Status = "301 Moved Permanently";
-			httpContext.Response.StatusCode = 301;
+			httpContext.Response.Status = "302 Redirect to localized version";
+			httpContext.Response.StatusCode = 302;
 			httpContext.Response.AddHeader("Location", redirectUrl);
 			httpContext.Response.End();
 		}

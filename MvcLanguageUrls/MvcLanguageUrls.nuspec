@@ -2,7 +2,7 @@
 <package >
 	<metadata>
 		<id>MvcLanguageUrls</id>
-		<version>1.0.0218.36</version>
+		<version>1.0.0810.60</version>
 		<title>Mvc Language Urls</title>
 		<authors>Salar Khalilzadeh</authors>
 		<owners>Salar Khalilzadeh</owners>
@@ -20,7 +20,6 @@
 	</metadata>
 	<files>
 		<file src="..\MvcLanguageUrls\Bin\Release\*.dll" target="lib" />
-		<file src="..\MvcLanguageUrls\Bin\Release\*.pdb" target="lib" />
 		<file src="..\MvcLanguageUrls\Bin\Release\*.xml" target="lib" />
 	</files>
 </package>

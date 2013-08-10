@@ -255,5 +255,16 @@ namespace MvcLanguageUrls
 			}
 			return culture.TwoLetterISOLanguageName.ToLower();
 		}
+
+		internal static string GetCultureTwoDigit(string defaultLang)
+		{
+			var culture = Thread.CurrentThread.CurrentUICulture;
+			string languageCode;
+			if (_userLanguages.TryGetValue(culture.LCID, out languageCode))
+			{
+				return languageCode;
+			}
+			return defaultLang;
+		}
 	}
 }

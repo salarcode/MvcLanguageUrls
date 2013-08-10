@@ -10,7 +10,11 @@
 		<projectUrl>http://mvclanguageurls.codeplex.com/</projectUrl>
 		<iconUrl>http://www.codeplex.com/Download/SourceControlFileDownload.ashx?ProjectName=mvclanguageurls&amp;changeSetId=40a69bb57316&amp;itemId=MvcLanguageUrls%2fResources%2fappicon.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>MvcLanguageUrls adds language switch to every url in the MVC appplication. It also has the ability to redirect or change language switch in urls.</description>
+		<description>
+			MvcLanguageUrls adds language switch to every url in the MVC appplication.
+			It has the ability to redirect or change language switch in urls.
+			More info: https://mvclanguageurls.codeplex.com/
+		</description>
 		<releaseNotes></releaseNotes>
 		<copyright>Copyright 2013</copyright>
 		<tags>MVC Url Localization Language Globalization</tags>
@@ -19,7 +23,7 @@
 		</dependencies>
 	</metadata>
 	<files>
-		<file src="..\MvcLanguageUrls\Bin\Release\*.dll" target="lib" />
-		<file src="..\MvcLanguageUrls\Bin\Release\*.xml" target="lib" />
+		<file src="..\MvcLanguageUrls\Bin\Release\*.dll" target="lib\net40" />
+		<file src="..\MvcLanguageUrls\Bin\Release\*.xml" target="lib\net40" />
 	</files>
 </package>

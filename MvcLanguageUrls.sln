@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcLanguageUrls", "MvcLanguageUrls\MvcLanguageUrls.csproj", "{83EF78B5-6D8A-4F8C-A855-CCB49EA4789E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlsTestApp", "UrlsTestApp\UrlsTestApp.csproj", "{9AEF035C-581A-4671-A678-BED68633DD33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{83EF78B5-6D8A-4F8C-A855-CCB49EA4789E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83EF78B5-6D8A-4F8C-A855-CCB49EA4789E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83EF78B5-6D8A-4F8C-A855-CCB49EA4789E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AEF035C-581A-4671-A678-BED68633DD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AEF035C-581A-4671-A678-BED68633DD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AEF035C-581A-4671-A678-BED68633DD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AEF035C-581A-4671-A678-BED68633DD33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

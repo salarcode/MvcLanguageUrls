@@ -2,7 +2,7 @@
 <package >
 	<metadata>
 		<id>MvcLanguageUrls</id>
-		<version>1.0.0810.60</version>
+		<version>1.1.1007.81</version>
 		<title>Mvc Language Urls</title>
 		<authors>Salar Khalilzadeh</authors>
 		<owners>Salar Khalilzadeh</owners>
@@ -15,7 +15,9 @@
 			It has the ability to redirect or change language switch in urls.
 			More info: https://mvclanguageurls.codeplex.com/
 		</description>
-		<releaseNotes></releaseNotes>
+		<releaseNotes>
+			Is compatible with bundled urls.
+		</releaseNotes>
 		<copyright>Copyright 2013</copyright>
 		<tags>MVC Url Localization Language Globalization</tags>
 		<dependencies>

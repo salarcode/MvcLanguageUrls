@@ -29,6 +29,7 @@ UrlsTestApp*/
 [Tt]est[Rr]esult*
 *.vssscc
 $tf*/
+CreateNugetPush.cmd
 CreateNuget-Push.cmd
 CreateNugetPack.cmd
 *.nupkg

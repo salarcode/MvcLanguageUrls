@@ -7,6 +7,14 @@ namespace System.Web.Mvc.Html
 	public static class MvcUrlHelpers
 	{
 		/// <summary>
+		/// 
+		/// </summary>
+		public static string GetCurrentLanguage(this HtmlHelper htmlHelper)
+		{
+			return htmlHelper.ViewContext.RouteData.GetCurrentLanguage();
+		}
+
+		/// <summary>
 		/// Returns an anchor element (a element) that contains the virtual path of the specified action.
 		/// </summary>
 		public static MvcHtmlString ActionLinkLang(this HtmlHelper htmlHelper, string linkText, string actionName)

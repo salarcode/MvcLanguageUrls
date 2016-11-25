@@ -30,7 +30,10 @@ namespace MvcLanguageUrls
 			}
 			Defaults = new RouteValueDictionary(new { controller = "Home", action = "Index", id = UrlParameter.Optional });
 		}
-
+		
+		/// <summary>
+		/// 
+		/// </summary>
 		public override RouteData GetRouteData(HttpContextBase httpContext)
 		{
 			var data = base.GetRouteData(httpContext);

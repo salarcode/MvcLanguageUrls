@@ -24,6 +24,12 @@ Thumbs.db
 obj/
 [Rr]elease*/
 _ReSharper*/
+packages*/
+UrlsTestApp*/
 [Tt]est[Rr]esult*
 *.vssscc
 $tf*/
+CreateNuget-Push.cmd
+CreateNugetPack.cmd
+*.nupkg
+/.vs

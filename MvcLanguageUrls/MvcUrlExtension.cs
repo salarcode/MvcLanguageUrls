@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
+using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
@@ -235,6 +236,80 @@ namespace MvcLanguageUrls
 			}
 		}
 
+		/// <summary>
+		/// Changes the locale of the thread if it is anyt different
+		/// </summary>
+		public static CultureInfo GetCurrentCulture(this HttpApplication app)
+		{
+			var language = app.Request.RequestContext.RouteData.GetCurrentLanguage();
+
+			var culture = Thread.CurrentThread.CurrentUICulture;
+			string currentLanguageCode;
+			if (_userLanguages.TryGetValue(culture.LCID, out currentLanguageCode))
+			{
+				// current language is the same
+				if (language == currentLanguageCode)
+					return culture;
+			}
+
+			// return the culture of the language specified
+			return new CultureInfo(language);
+		}
+
+		/// <summary>
+		/// Changes the locale of the thread if it is anyt different
+		/// </summary>
+		public static void SetCurrentCulture(this HttpApplication app)
+		{
+			var culture = GetCurrentCulture(app);
+			Thread.CurrentThread.CurrentUICulture = culture;
+			Thread.CurrentThread.CurrentCulture = culture;
+		}
+
+
+		/// <summary>
+		/// Changes the locale of the thread if it is anyt different
+		/// </summary>
+		public static CultureInfo GetCurrentCulture(this Controller controller)
+		{
+			var language = controller.RouteData.GetCurrentLanguage();
+
+			var culture = Thread.CurrentThread.CurrentUICulture;
+			string currentLanguageCode;
+			if (_userLanguages.TryGetValue(culture.LCID, out currentLanguageCode))
+			{
+				// current language is the same
+				if (language == currentLanguageCode)
+					return culture;
+			}
+
+			// return the culture of the language specified
+			return new CultureInfo(language);
+		}
+
+		/// <summary>
+		/// Changes the locale of the thread if it is anyt different
+		/// </summary>
+		public static void SetCurrentCulture(this Controller controller)
+		{
+			var culture = GetCurrentCulture(controller);
+			Thread.CurrentThread.CurrentUICulture = culture;
+			Thread.CurrentThread.CurrentCulture = culture;
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		public static string GetCurrentLanguage(this RouteData routeData)
+		{
+			var value = routeData.Values[MvcUrlExtension.LanguageRouteKey] as string;
+			if (string.IsNullOrWhiteSpace(value))
+			{
+				return MvcUrlExtension.GetCultureTwoDigit();
+			}
+			return value;
+		}
+
 
 		static void BuildUserLanguages(string[] lang)
 		{
@@ -266,5 +341,6 @@ namespace MvcLanguageUrls
 			}
 			return defaultLang;
 		}
+
 	}
 }
